@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css'%}">
+  </head>
+  <body>
+  <h1>Hello world</h1>
+
+  <a href={% url 'contact' %}>click to go to contact</a>
+
+  <p></p>
+
+  <img src="{% static 'Tuscany.jpg' %}" alt="">
+  <p></p>
+
+  <button onclick="buttonFunc()">Click me</button>
+  
+  <form action="{% url 'contact' %}">
+    {% csrf_token %}
+     <input type="text" name="user_input">
+     <input type="submit" value="Click me">
+  </form>
+
+  <script type="text/javascript" src="{% static 'main.js' %}">
+
+  </script>
+  </body>
+</html>
